@@ -9,7 +9,7 @@ export default class UserList extends Component {
                 {
                     users.map(user => {
                         return (
-                            <User user={user} />
+                            <User user={user} key={user.id} />
                         )
                     })
                 }
