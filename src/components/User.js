@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class User extends Component {
 
     handleClick = (userId) => {
-        console.log("Click user => " + userId);
+        window.location.href = `/user/${userId}`
     }
 
     render() {
