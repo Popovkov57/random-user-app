@@ -19,7 +19,7 @@ class UserDetails extends Component {
       <>
         <div className="flex flex-row justify-center">
           <div className="mt-10 ml-10 mr-10 flex flex-row rounded-xl p-4 bg-white ring-1 ring-slate-900/5 basis-3/5 text-center">
-            <div className="basis-1/4">
+            <div className="basis-1/4 p-4">
               <img className="rounded-full ring-1 ring-slate-900/5 bg-white" src={this.state.user.avatar} alt="" width="384" height="512" />
             </div>
             <div className="basis-3/4 p-4 ml-10">
