@@ -1,11 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserList from './components/UserList';
+import UserDetails from './components/UserDetails';
 
 function App() {
   return (
     <div className="App p-10">
-      <h1 className='text-gray-700 text-4xl text-center'>Users list</h1>
-      <UserList />
+      <Routes>
+        <Route path='/users' element={<UserList/>}></Route>
+        <Route path='/users/:userId' element={<UserDetails />}></Route>
+      </Routes>
     </div>
   );
 }

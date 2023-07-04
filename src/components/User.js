@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
+import { navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 
-export default class User extends Component {
+
+function withRouter(Component) {
+    function ComponentWithRouterProp(props) {
+        let location = useLocation();
+        let navigate = useNavigate();
+        let params = useParams();
+        return (
+            <Component
+                {...props}
+                router={{ location, navigate, params }}
+            />
+        );
+    }
+
+    return ComponentWithRouterProp;
+}
+
+class User extends Component {
 
     handleClick = (userId) => {
-        window.location.href = `/user/${userId}`
+        this.props.router.navigate(`/users/${userId}`)
     }
 
     render() {
@@ -31,7 +49,7 @@ export default class User extends Component {
                             </div>
                         </div>
                         <div className="mt-2 text-right">
-                            <span className="p-1 text-slate-600 bg-slate-100 font-bold rounded-lg text-center font-medium ">{this.props.user.employment.key_skill}</span>
+                            <span className="p-1 text-slate-600 bg-slate-100 rounded-lg text-center font-medium ">{this.props.user.employment.key_skill}</span>
                         </div>
                     </div>
                 </div>
@@ -39,3 +57,5 @@ export default class User extends Component {
         )
     }
 }
+
+export default withRouter(User)
