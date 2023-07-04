@@ -6,8 +6,8 @@ export default class UserList extends Component {
     render() {
         return (
             <>
-                <h1 className='text-gray-700 text-4xl text-center'>Users list</h1>
-                <div className="mt-10 grid grid-cols-3 gap-6">
+                <h1 className='text-gray-700 text-4xl text-center'>Users</h1>
+                <div className="mt-10 grid grid-cols-4 gap-6">
                     {
                         users.map(user => {
                             return (
