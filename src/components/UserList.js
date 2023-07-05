@@ -54,9 +54,14 @@ const UserList = () => {
             }
             </div>
             <div className="text-center">
-                <button className='bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-20' onClick={loadUser}>
-                    Load random users
-                </button>
+                {
+                    !loader ? 
+                        <button className='bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-20' onClick={loadUser}>
+                            Load random users
+                        </button>
+                        : null
+
+                }
             </div>
         </div>
     )
