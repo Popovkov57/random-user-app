@@ -1,20 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import User from './User'
 import base from '../base'
-import { ref, set } from "firebase/database"
+import { ref, set, onValue } from "firebase/database"
 
 const UserList = () => {
 
-    const [ users, setUsers ] = useState([])
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        const usersRef = ref(base, '/users');
+
+        onValue(usersRef, (snapshot) => {
+            const users = snapshot.val();
+            if (users !== null) {
+                setUsers(users);
+            }
+        });
+    }, []);
 
     const loadUser = () => {
         let usersRef = ref(base, '/');
         let url = 'https://random-data-api.com/api/v2/users?size=10';
-        fetch(url).then(res => res.json()).then( users => {
+        fetch(url).then(res => res.json()).then(users => {
             set(usersRef, {
                 users: users
-             });
-            setUsers( users )
+            });
+            setUsers(users)
         })
     }
 
