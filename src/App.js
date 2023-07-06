@@ -4,6 +4,7 @@ import UserList from './components/UserList';
 import UserDetails from './components/UserDetails';
 import NavBar from './components/NavBar';
 import { Component } from 'react';
+import UserEdit from './components/UserEdit';
 
 class App extends Component {
 
@@ -14,7 +15,8 @@ class App extends Component {
         <div className="App p-10 bg-slate-100">
           <Routes>
             <Route path='/users' element={<UserList />}></Route>
-            <Route path='/users/:userId' element={<UserDetails />}></Route>
+            <Route path='/users/details/:userId' element={<UserDetails />}></Route>
+            <Route path='/users/edit/:userId' element={<UserEdit />}></Route>
           </Routes>
         </div>
       </>

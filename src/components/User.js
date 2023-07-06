@@ -7,7 +7,8 @@ const User = ( {user} ) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/users/${user.id}`);
+        console.log('user handle click');
+        navigate(`/users/details/${user.id}`);
     }
 
     return (
