@@ -1,48 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom';
-import { set, ref, onValue } from "firebase/database";
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import base from '../base';
+import { ref, set, onValue } from 'firebase/database';
 
-
-const UserEdit = () => {
-
-    const { userId } = useParams();
+const UserCreation = () => {
     const [user, setUser] = useState()
     const [users, setUsers] = useState()
     const navigate = useNavigate();
     const usersRef = ref(base, '/users');
+    const userId = Math.floor(Math.random() * 1000);
+    const urlAvatar = 'https://robohash.org/new' + userId;
 
     useEffect(() => {
-        console.log("userEffect");
+        const usersRef = ref(base, '/users');
+
+        let user = {
+            id: userId,
+            avatar: urlAvatar
+        }
+        setUser(user)
+
         onValue(usersRef, (snapshot) => {
             const users = snapshot.val();
-            let user = {};
             setUsers(users)
-            if (users !== null) {
-                user = users.find(user => user.id.toString() === userId.toString())
-                setUser(user);
-            }
         });
-    }, [userId]);
+    }, []);
 
     const cancel = () => {
-        navigate(`/users/details/${userId}`)
+        navigate('/users')
     }
 
-    const updateUser = () => {
-        let usersUpdated = [];
-        usersUpdated = users.map(u => {
-            if (u.id.toString() === userId.toString()) {
-                u = user;
-            }
-            return u
-        })
-        set(usersRef, usersUpdated);
-        navigate(`/users/details/${userId}`)
+    const createUser = () => {
+        let newUser = { ...user};
+        users.push(newUser);
+        set(usersRef, users);
+        navigate('/users')
     }
 
     const handleChange = (e) => {
-        e.preventDefault();
         const { name, value } = e.target;
         let tabName = name.split('.');
         let updatedUser = { ...user};
@@ -61,7 +56,6 @@ const UserEdit = () => {
             updatedUser[name] = value;
         }
         setUser(updatedUser)
-        
     }
 
     const setToValue = (obj, value, path) => {
@@ -216,7 +210,7 @@ const UserEdit = () => {
                                 </div>
                             </form>
                             <div className="flex flex-row mt-12 justify-end">
-                                <button className='flex flex-row bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 px-2 rounded' onClick={updateUser}>
+                                <button className='flex flex-row bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 px-2 rounded' onClick={createUser}>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-1">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                     </svg>
@@ -237,4 +231,4 @@ const UserEdit = () => {
     )
 }
 
-export default UserEdit
+export default UserCreation

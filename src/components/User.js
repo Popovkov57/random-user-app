@@ -7,7 +7,6 @@ const User = ( {user} ) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        console.log('user handle click');
         navigate(`/users/details/${user.id}`);
     }
 
@@ -19,10 +18,10 @@ const User = ( {user} ) => {
             <div className="basis-3/4 p-4">
                 <div className="flex flex-col text-left">
                     <p className="text-slate-700 font-medium text-xl">
-                        {user.first_name} {user.last_name}
+                        {user?.first_name} {user?.last_name}
                     </p>
                     <p className="text-slate-500 font-medium">
-                        {user.employment.title}
+                        {user?.employment?.title}
                     </p>
                 </div>
             </div>

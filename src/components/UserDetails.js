@@ -19,7 +19,7 @@ const UserDetails = () => {
       const users = snapshot.val();
       let user = {};
       if (users !== null) {
-        user = users.find(user => user.id == userId)
+        user = users.find(user => user.id.toString() === userId.toString())
         setUser(user);
       }
     });
@@ -55,7 +55,7 @@ const UserDetails = () => {
                 {user?.first_name} {user?.last_name}
               </p>
               <p className="text-xl text-slate-500 font-medium mt-2">
-                {user?.employment.title}
+                {user?.employment?.title}
               </p>
               <div className="flex flex-row">
                 <div className="basis-1/2 ">
@@ -79,9 +79,9 @@ const UserDetails = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                     <div className="flex flex-col ml-4">
-                      <span>{user?.address.city}, {user?.address.state}</span>
-                      <span>{user?.address.street_address}</span>
-                      <span>{user?.address.zip_code}</span>
+                      <span>{user?.address?.city}, {user?.address?.state}</span>
+                      <span>{user?.address?.street_address}</span>
+                      <span>{user?.address?.zip_code}</span>
                     </div>
                   </div>
                 </div>

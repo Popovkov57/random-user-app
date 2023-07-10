@@ -5,6 +5,7 @@ import UserDetails from './components/UserDetails';
 import NavBar from './components/NavBar';
 import { Component } from 'react';
 import UserEdit from './components/UserEdit';
+import UserCreation from './components/UserCreation';
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
             <Route path='/users' element={<UserList />}></Route>
             <Route path='/users/details/:userId' element={<UserDetails />}></Route>
             <Route path='/users/edit/:userId' element={<UserEdit />}></Route>
+            <Route path='/users/new' element={<UserCreation />}></Route>
           </Routes>
         </div>
       </>
