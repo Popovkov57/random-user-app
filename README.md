@@ -1,41 +1,16 @@
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
 # Random User App
 
-A simple React CRUD web application to get random users from this [API]()
+A simple React CRUD web application to get random users from this [Random Data API](https://random-data-api.com)
 
 ## Installation
 Follwing are the steps to install this application
 
-1. Clone this repository from https://github.com/Popovkov57/random-user-app. In the terminal/command prompt, `cd` to the desired directory and type
+1. Clone this repository
 ```
 git clone git@github.com:Popovkov57/random-user-app.git
 ```
-2. `cd` into the `random-user-app` which was cloned.
+
+2. Go into the folder `random-user-app` which was cloned.
 ```
 cd random-user-app
 ```
@@ -66,3 +41,6 @@ npm run build
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
 
 ## License
+The source code for the site is licensed under the MIT license, which you can find in the MIT-LICENSE.txt file.
+
+All graphical assets are licensed under the Creative Commons Attribution 3.0 Unported License.
