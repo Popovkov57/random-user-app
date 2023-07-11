@@ -2,6 +2,8 @@
 
 A simple React CRUD web application to get random users from this [Random Data API](https://random-data-api.com)
 
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2Nza3ZweHVjaXdiM3R1cWU3Z2J4NDdwdHZqenRqNXhxeXl3OXVmNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/O9qWPKGi6VNB3TaZlP/giphy.gif)
+
 ## Installation
 Follwing are the steps to install this application
 
