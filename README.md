@@ -40,6 +40,7 @@ npm run build
 ```
 
 ## Build Information
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3467352-ac06-4c07-9ddb-c757080f494b/deploy-status)](https://app.netlify.com/sites/amazing-pony-2c74ff/deploys)
 [![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
 
 ## License
