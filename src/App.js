@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import UserList from './components/UserList';
 import UserDetails from './components/UserDetails';
@@ -15,10 +15,11 @@ class App extends Component {
         <NavBar />
         <div className="App p-10 bg-slate-100">
           <Routes>
-            <Route path='/users' element={<UserList />}></Route>
-            <Route path='/users/details/:userId' element={<UserDetails />}></Route>
-            <Route path='/users/edit/:userId' element={<UserEdit />}></Route>
-            <Route path='/users/new' element={<UserCreation />}></Route>
+              <Route path="/" element={<Navigate to="/users" />}></Route>
+              <Route path='/users' element={<UserList />}></Route>
+              <Route path='/users/details/:userId' element={<UserDetails />}></Route>
+              <Route path='/users/edit/:userId' element={<UserEdit />}></Route>
+              <Route path='/users/new' element={<UserCreation />}></Route>
           </Routes>
         </div>
       </>
