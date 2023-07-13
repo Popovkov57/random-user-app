@@ -55,7 +55,7 @@ const UserList = () => {
                     </div>
                 </button>
             </div>
-            <div className="mt-10 grid grid-cols-4 gap-6">
+            <div className="mt-5 grid grid-cols-4 gap-6">
                 {
                     loader ?
                         <TailSpin
@@ -70,7 +70,7 @@ const UserList = () => {
                 }
             </div>
             <div className="text-center">
-                <button className='bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-20' onClick={loadUser}>
+                <button className='bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-10' onClick={loadUser}>
                     Load random users
                 </button>
             </div>
