@@ -111,7 +111,7 @@ const UserEdit = () => {
                                             Last Name
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                                             name="last_name"
                                             type="text"
                                             placeholder="Doe"
@@ -125,7 +125,7 @@ const UserEdit = () => {
                                             Employment Title
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                             name="employment.title"
                                             type="text"
                                             placeholder="Developer"
@@ -139,7 +139,7 @@ const UserEdit = () => {
                                             Email
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                             name="email"
                                             type="email"
                                             placeholder="jane@doe.com"
@@ -153,7 +153,7 @@ const UserEdit = () => {
                                             Phone Number
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                             name="phone_number"
                                             type="text"
                                             placeholder="+7-6 760-610-4694"
@@ -167,7 +167,7 @@ const UserEdit = () => {
                                             Address
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                             name="address.street_address"
                                             type="email"
                                             placeholder="9199 Will Drives"
@@ -181,7 +181,7 @@ const UserEdit = () => {
                                             City
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                                             name="address.city"
                                             type="text"
                                             placeholder="Port Orville"
@@ -193,7 +193,7 @@ const UserEdit = () => {
                                             State
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                                             name="address.state"
                                             type="text"
                                             placeholder="Colorado"
@@ -205,7 +205,7 @@ const UserEdit = () => {
                                             Zip
                                         </label>
                                         <input
-                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                                             name="address.zip_code"
                                             type="text"
                                             placeholder="90210"
