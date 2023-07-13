@@ -86,14 +86,14 @@ const UserEdit = () => {
     return (
         <>
             <div className="flex flex-row justify-center">
-                <div className="mt-10 ml-10 mr-10 flex flex-row rounded-xl p-4 bg-white ring-1 ring-slate-900/5 basis-3/5 text-center">
+                <div className="mt-5 ml-5 mr-5 flex flex-row rounded-xl p-2 bg-white ring-1 ring-slate-900/5 basis-3/5 text-center">
                     <div className="basis-1/4 p-4">
                         <img className="rounded-full ring-1 ring-slate-900/5 bg-white" src={user?.avatar} alt="" width="384" height="512" />
                     </div>
-                    <div className="basis-3/4 p-4 ml-10 mt-10 mr-10">
+                    <div className="basis-3/4 p-4 ml-5 mt-5 mr-5">
                         <div className="flex flex-col text-left">
                             <form className="w-full">
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-3">
                                     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             First Name
@@ -119,7 +119,7 @@ const UserEdit = () => {
                                             onChange={e => handleChange(e)} />
                                     </div>
                                 </div>
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-3">
                                     <div className="w-full px-3">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             Employment Title
@@ -133,7 +133,7 @@ const UserEdit = () => {
                                             onChange={e => handleChange(e)} />
                                     </div>
                                 </div>
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-3">
                                     <div className="w-full px-3">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             Email
@@ -147,7 +147,7 @@ const UserEdit = () => {
                                             onChange={e => handleChange(e)} />
                                     </div>
                                 </div>
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-3">
                                     <div className="w-full px-3">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             Phone Number
@@ -161,7 +161,7 @@ const UserEdit = () => {
                                             onChange={e => handleChange(e)} />
                                     </div>
                                 </div>
-                                <div className="flex flex-wrap -mx-3 mb-6">
+                                <div className="flex flex-wrap -mx-3 mb-3">
                                     <div className="w-full px-3">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             Address
@@ -188,7 +188,7 @@ const UserEdit = () => {
                                             defaultValue={user?.address?.city}
                                             onChange={e => handleChange(e)} />
                                     </div>
-                                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                    <div className="w-full md:w-1/3 px-3 mb-3 md:mb-0">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             State
                                         </label>
@@ -200,7 +200,7 @@ const UserEdit = () => {
                                             defaultValue={user?.address?.state}
                                             onChange={e => handleChange(e)} />
                                     </div>
-                                    <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                                    <div className="w-full md:w-1/3 px-3 mb-3 md:mb-0">
                                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                                             Zip
                                         </label>
@@ -214,7 +214,7 @@ const UserEdit = () => {
                                     </div>
                                 </div>
                             </form>
-                            <div className="flex flex-row mt-12 justify-end">
+                            <div className="flex flex-row mt-6 justify-end">
                                 <button className='flex flex-row bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 px-2 rounded' onClick={updateUser}>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-1">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
