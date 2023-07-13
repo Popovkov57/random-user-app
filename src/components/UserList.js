@@ -46,7 +46,7 @@ const UserList = () => {
 
         <div>
             <div className="text-right">
-                <button className='border-transparent border-4 text-teal-500 hover:text-teal-800 rounded font-bold text-right' onClick={createUser}>
+                <button className='border-transparent border-4 text-teal-500 hover:text-teal-800 rounded text-right' onClick={createUser}>
                     <div className="flex flex-row">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-1" >
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
@@ -70,7 +70,7 @@ const UserList = () => {
                 }
             </div>
             <div className="text-center">
-                <button className='bg-teal-400 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded mt-10' onClick={loadUser}>
+                <button className='bg-teal-400 hover:bg-teal-600 text-white py-2 px-4 rounded mt-10' onClick={loadUser}>
                     Load random users
                 </button>
             </div>

@@ -13,7 +13,6 @@ const UserEdit = () => {
     const usersRef = ref(base, '/users');
 
     useEffect(() => {
-        console.log("userEffect");
         onValue(usersRef, (snapshot) => {
             const users = snapshot.val();
             let user = {};
