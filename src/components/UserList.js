@@ -58,12 +58,14 @@ const UserList = () => {
             <div className="mt-5 grid grid-cols-4 gap-6">
                 {
                     loader ?
-                        <TailSpin
-                            height="80"
-                            width="80"
-                            color="#4fa94d"
-                            wrapperStyle={{ position: "fixed", left: "50%", transform: "translate(-50%, -50%)" }}
-                        />
+                        <div className="mb-12">
+                            <TailSpin
+                                height="80"
+                                width="80"
+                                color="#4fa94d"
+                                wrapperStyle={{ position: "fixed", left: "50%", transform: "translate(-50%, -50%)" }}
+                            />
+                        </div>
                         :
                         users.map(user => { return (<User user={user} key={user.id} />) })
 
