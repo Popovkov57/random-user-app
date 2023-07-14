@@ -45,20 +45,20 @@ const UserDetails = () => {
   return (
     <>
       <div className="flex flex-row justify-center">
-        <div className="mt-5 ml-5 mr-5 flex flex-row rounded-xl p-4 bg-white ring-1 ring-slate-900/5 basis-3/5 text-center">
-          <div className="basis-1/4 p-4">
+        <div className="sm:mt-5 sm:ml-5 sm:mr-5 flex flex-row max-sm:flex-wrap rounded-xl p-4 bg-white ring-1 ring-slate-900/5 sm:basis-3/5 text-center">
+          <div className="sm:basis-1/4 p-4">
             <img className="rounded-full ring-1 ring-slate-900/5 bg-white" src={user?.avatar} alt="" width="384" height="512" />
           </div>
-          <div className="basis-3/4 p-4 ml-5">
-            <div className="flex flex-col text-left mt-4">
+          <div className="sm:basis-3/4 p-4 sm:ml-5">
+            <div className="flex flex-col sm:text-left mt-4">
               <p className="text-4xl text-slate-700 font-medium">
                 {user?.first_name} {user?.last_name}
               </p>
               <p className="text-xl text-slate-500 font-medium mt-2">
                 {user?.employment?.title}
               </p>
-              <div className="flex flex-row">
-                <div className="basis-1/2 ">
+              <div className="flex flex-row max-sm:flex-wrap max-sm:text-left">
+                <div className="sm:basis-1/2 ">
                   <div className="text-slate-400 flex flex-row mt-8">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -72,8 +72,8 @@ const UserDetails = () => {
                     <span className='ml-2'>{user?.phone_number}</span>
                   </div>
                 </div>
-                <div className="basis-1/2">
-                  <div className="text-slate-400 flex flex-row mt-8 ml-4">
+                <div className="sm:basis-1/2">
+                  <div className="text-slate-400 flex flex-row mt-8 max-sm:mt-4 sm:ml-4">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
@@ -86,7 +86,7 @@ const UserDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row mt-12 justify-end">
+              <div className="flex flex-row mt-12 sm:justify-end justify-center">
                 <button className='flex flex-row bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 px-2 rounded mr-1' onClick={editUser}>
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 mr-2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
