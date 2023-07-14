@@ -1,13 +1,22 @@
-import React, { Component, useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const catMenu = useRef(null)
 
     const displayResponsiveMenu = () => {
         setIsOpen(!isOpen)
     }
+
+    const closeOpenMenus = (e)=>{
+        if(catMenu.current && isOpen && !catMenu.current.contains(e.target)){
+            setIsOpen(false)
+        }
+    }
+
+    document.addEventListener('mousedown',closeOpenMenus)
 
     return (
         <nav>
@@ -40,7 +49,7 @@ const NavBar = () => {
             </div>
             {
                 isOpen ?
-                    <div className="flex items-center justify-between flex-wrap bg-teal-500 pl-6 pt-2 pb-2">
+                    <div className="flex items-center justify-between flex-wrap bg-teal-500 pl-6 pt-2 pb-2" ref={catMenu}>
                         <ul>
                             <li>
                                 <Link to="/users" className="block lg:mt-0 text-teal-200 hover:text-white mr-4">
