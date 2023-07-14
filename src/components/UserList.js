@@ -58,7 +58,7 @@ const UserList = () => {
             <div className="mt-5 grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
                 {
                     loader ?
-                        <div className="mb-12">
+                        <div className="mb-12 mt-12">
                             <TailSpin
                                 height="80"
                                 width="80"
