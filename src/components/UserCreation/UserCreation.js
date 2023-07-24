@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import base from '../base';
+import base from '../../base';
 import { ref, set, onValue } from 'firebase/database';
 
 const UserCreation = () => {
@@ -24,6 +24,7 @@ const UserCreation = () => {
             const users = snapshot.val();
             setUsers(users)
         });
+    // eslint-disable-next-line
     }, []);
 
     const cancel = () => {

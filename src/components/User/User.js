@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const User = ( {user} ) => {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleClick = () => {
         navigate(`/users/details/${user.id}`);

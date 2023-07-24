@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import User from './User'
-import base from '../base'
+import User from '../User/User'
+import base from '../../base'
 import { ref, set, onValue } from "firebase/database"
 import { TailSpin } from 'react-loader-spinner'
 import { useNavigate } from 'react-router-dom'

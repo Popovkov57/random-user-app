@@ -1,11 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import './App.css';
-import UserList from './components/UserList';
-import UserDetails from './components/UserDetails';
-import NavBar from './components/NavBar';
+import UserList from './components/UserList/UserList';
+import UserDetails from './components/UserDetails/UserDetails';
+import NavBar from './components/NavBar/NavBar';
 import { Component } from 'react';
-import UserEdit from './components/UserEdit';
-import UserCreation from './components/UserCreation';
+import UserEdit from './components/UserEdit/UserEdit';
+import UserCreation from './components/UserCreation/UserCreation';
 
 class App extends Component {
 

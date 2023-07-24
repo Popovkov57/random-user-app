@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { useParams, useNavigate } from "react-router-dom";
 
-import base from '../base';
+import base from '../../base';
 
 import { set, ref, onValue } from "firebase/database";
 
@@ -31,7 +31,7 @@ const UserDetails = () => {
     onValue(usersRef, (snapshot) => {
       let users = snapshot.val();
       if (users !== null) {
-        users = users.filter(user => user.id != userId)
+        users = users.filter(user => user.id.toString() !== userId.toString())
       }
       set(usersRef, users);
     });

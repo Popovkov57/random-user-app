@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import { set, ref, onValue } from "firebase/database";
-import base from '../base';
+import base from '../../base';
 
 
 const UserEdit = () => {
@@ -22,6 +22,7 @@ const UserEdit = () => {
                 setUser(user);
             }
         });
+    // eslint-disable-next-line
     }, [userId]);
 
     const cancel = () => {
