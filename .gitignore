@@ -25,4 +25,4 @@ yarn-error.log*
 # api keys
 .env
 
-/src/components/__snapshots__/*
+/src/components/*/__snapshots__/*
