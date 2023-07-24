@@ -34,6 +34,14 @@ const user = {
     username: "trisha.mcdermott"
 }
 
+// Mock UseNavigate function
+const mockedUsedNavigate = jest.fn();
+
+jest.mock('react-router-dom', () => ({
+   ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockedUsedNavigate,
+}));
+
 it('verify snapshot', () => {
     const component = renderer.create(
         <User user={user}></User>,
