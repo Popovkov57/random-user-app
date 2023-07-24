@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import base from '../../base';
 import { ref, set, onValue } from 'firebase/database';
+import { setToValue, writeObject } from '../../utils/utils';
 
 const UserCreation = () => {
     const [user, setUser] = useState()
@@ -57,26 +58,6 @@ const UserCreation = () => {
             updatedUser[name] = value;
         }
         setUser(updatedUser)
-    }
-
-    const setToValue = (obj, value, path) => {
-        let i;
-        path = path.split('.');
-        for (i = 0; i < path.length - 1; i++) {
-            obj = obj[path[i]];
-        }
-        obj[path[i]] = value;
-    }
-
-    const writeObject = (object, value, path) => {
-        path = path.split('.');
-        return path.reduceRight((obj, next, idx, fullPath) => {
-            if (idx + 1 === fullPath.length) {
-                return { [next]: value }
-            } else {
-                return { [next]: obj }
-            }
-        }, object);
     }
 
     return (
