@@ -38,24 +38,29 @@ const user = {
 const mockedUsedNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
-   ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockedUsedNavigate,
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockedUsedNavigate,
 }));
 
-it('verify snapshot', () => {
-    const component = renderer.create(
-        <User user={user}></User>,
-    );
-    let tree = component.toJSON();
+const component = renderer.create(
+    <User user={user}></User>,
+);
 
-    expect(tree).toMatchSnapshot();
-});
+describe('User displaying', () => {
+    it('it should match snapshot', () => {
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+    it('it should return employment title', () => {
+        let employmentTitleText = component.root.findByProps({ className: 'text-slate-500 font-medium text-xs' }).props.children
+        expect(employmentTitleText).toEqual("Chief Administration Producer")
+    });
+})
 
-it('verify employment title text', () => {
-    const component = renderer.create(
-        <User user={user}></User>,
-    );
-    let employmentTitleText = component.root.findByProps({ className: 'text-slate-500 font-medium text-xs' }).props.children
-
-    expect(employmentTitleText).toEqual("Chief Administration Producer")
-});
+describe('User click', () => {
+    it('it should call navigate', () => {
+        let userCard = component.root.findByProps({ className: 'flex flex-row rounded-xl p-4 bg-white ring-1 ring-slate-900/5 hover:bg-slate-200 cursor-pointer' })
+        userCard.props.onClick();
+        expect(mockedUsedNavigate).toBeCalled();
+    })
+})
